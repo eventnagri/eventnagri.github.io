@@ -1,5 +1,5 @@
 /**
-* api to send mail to enventnagri support team.
+* send mail to enventnagri support team.
 *
 * @author Rishu Kumar
 */
@@ -29,13 +29,13 @@ $(document).ready(function(){
                 {
                     if(response['status']===500)
                     {
-                        $('#apiResult').text("<span class='text text-danger'>Sorry! We Unable To Submit Your Request! Please Try Agian In a Moment.<span>")
+                        $('#apiResult').html("<span class='text text-danger'>Sorry! We Unable To Submit Your Request! Please Try Agian In a Moment.<span>")
                         $('#messageButton').click();
                         $('.r-spin').css('display','none');
                     }
                     else if(response['status']===200)
                     {
-                        $('#apiResult').text("<span class='text text-success'>Hurray! Your Query Submited! Our Support Team Will Shortly Contact You.<span>")
+                        $('#apiResult').html("<span class='text text-success'>Hurray! Your Query Submited! Our Support Team Will Shortly Contact You.<span>")
                         $('#messageButton').click();
                         $('.r-spin').css('display','none');
                         $("#name").val('');
@@ -44,7 +44,7 @@ $(document).ready(function(){
                         $("#message").val('');
                     }
                     else{
-                        $('#apiResult').text("<span class='text text-danger'>Sorry! Something Went Wrong!<span>")
+                        $('#apiResult').html("<span class='text text-danger'>Sorry! Something Went Wrong!<span>")
                         $('#messageButton').click();
                         $('.r-spin').css('display','none'); 
                     } 
@@ -67,7 +67,7 @@ $(document).ready(function(){
                     } else {
                         msg = 'Uncaught Error.\n' + jqXHR.responseText;
                     }
-                    alert(msg);
+                    //alert(msg);
                     $('.r-spin').css('display','none'); 
                 }
             });
