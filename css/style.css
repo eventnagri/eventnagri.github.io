@@ -903,7 +903,7 @@ p {
     .logo-width{
         width: 100% !important;
         position: relative !important;
-        left:57% !important;
+        left:54% !important;
         transform: translateX(-50%) scale(1) !important;
     }
   }
